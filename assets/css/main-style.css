@@ -1,11 +1,5 @@
 /*--------------------- Copyright (c) 2021 ----------------------- 
-[Master Stylesheet] 
-Template Name: Catering HTML Template 
-Version: 1.0.0
-Author: Kamleshyadav
-Website: https://www.pixelnx.com/
-Purchase: http://themeforest.net/user/kamleshyadav
- ------------------------------------------------------------------- 
+
 [Table of contents] 
 	01. Global CSS Start
 	02. Comman CSS Start
@@ -1861,12 +1855,13 @@ body .search-field {
 }
 
 .cat-story-list li {
+    width: auto;
     list-style: none;
     position: relative;
     background: var(--cat-white);
-    padding: 10px 20px;
+    padding: 10px;
     box-shadow: 0 0 20px 0 rgb(0 0 0 / 8%);
-    margin: 20px 0 0;
+    margin: 10px;
     border-radius: 3px;
     color: var(--cat-primary-color);
     font-weight: 600;
@@ -2633,6 +2628,11 @@ body .search-field {
 /**********************************
     Video CSS Start
  **********************************/
+
+.video-img{
+    width: 100%;
+    object-fit: cover;
+}
 
 .cat-counter-info .cat-heading-wrapper {
     text-align: left;

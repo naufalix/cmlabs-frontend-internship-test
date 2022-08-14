@@ -73,6 +73,37 @@
     });
   }
 
+  function getMealsDetail(i) {
+    $.ajax({
+        url: "https://www.themealdb.com/api/json/v1/1/lookup.php?i="+i,
+        type: 'GET',
+        dataType: 'json',
+        success: function(mydata) {
+            //alert(JSON.stringify(mydata));
+            var size = Object.keys(mydata.meals).length;
+            var val = "";
+            var no = 1;
+            for (var i = 1; i <= 20; i++) {
+                var strIngredient = mydata.meals[0]["strIngredient"+i];
+                if(strIngredient==null||strIngredient==""){continue;}
+                val +=  '<li>'+strIngredient+'</li>';
+                no++;
+            }
+            $("#ingredient").html(val);
+            $("#sc").text(mydata.meals[0].strCategory);
+            $("#sm").text(mydata.meals[0].strMeal);
+            $("#mn").text(mydata.meals[0].strMeal);
+            $("#mi").text(mydata.meals[0].strInstructions);
+            $("#mp").attr("src",mydata.meals[0].strMealThumb);
+            $("#mv").attr("src",mydata.meals[0].strMealThumb);
+            $("#mt").attr("href",mydata.meals[0].strYoutube);
+            var width = $("#mv").width();
+            $("#mv").height((width/1.8)+"px");
+      
+        }
+    });
+  }
+
   if(page=="index"){
     getCategories()
   }
@@ -84,6 +115,13 @@
     $("#bc2").text(c);
     $("#title").text(c+" Meals");
     getMeals(c);
+  }
+  if(page=="meals-detail"){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const i = urlParams.get('i')
+    if(i==null||i==""){window.location.href = 'index.html'}
+    getMealsDetail(i)
   }
   
 
