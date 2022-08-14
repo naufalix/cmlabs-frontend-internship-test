@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/main-style.css">
     <link rel="stylesheet" id="color-change" type="text/css" href="#">
     <link rel="shortcut icon" type="image/ico" href="assets/images/favicon.ico" />
-    <title page="index" >Meal App - Home</title>
+    <title>Meal App - Home</title>
 </head>
 
 <body>
@@ -24,25 +24,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-4">
-                        <h4>Meal App</h4>
+                        <h4><a href="index.html">Meal App</a></h4>
                     </div>
                     <div class="col-xl-10 col-lg-9 col-md-9 col-sm-8 col-8">
                         <div class="main-menu-container">
                             <!-- Header Menus -->
                             <div class="main-menu">
                                 <ul>
-                                    <li class="active"><a href="index-2.html">Home</a></li>
-                                    <li><a href="menu.html">Menu</a></li>
-                                    <li><a href="event.html">Events</a></li>
-                                    <li><a href="about.html">About Us</a></li>
+                                    <li class="active"><a href="index.html">Home</a></li>
+                                    <li><a href="index.html#menu">Menu</a></li>
                                     <li class="has-sub-menu">
-                                        <a href="javascript:void(0);">Pages</a>
-                                        <ul class="sub-menu">
+                                        <a href="javascript:void(0);">Meals <i class="fa fa-angle-down"></i></a>
+                                        <ul id="submenu" class="sub-menu">
                                             <li><a href="faq.html">Faq's</a></li>
                                             <li><a href="error.html">404</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
                             </div>
 
@@ -100,7 +97,7 @@
         </section>
 
         <!-- Service Section -->
-        <section class="cat-service-wrapper cat-section-spacer-equal relative">
+        <section id="menu" class="cat-service-wrapper cat-section-spacer-equal relative">
             <div class="top-left-shap bouncing">
                 <img src="assets/images/shap/tomatto.png" alt="">
             </div>

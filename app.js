@@ -104,6 +104,25 @@
     });
   }
 
+  function setSubmenu() {
+    $.ajax({
+        url: "https://www.themealdb.com/api/json/v1/1/categories.php",
+        type: 'GET',
+        dataType: 'json',
+        success: function(mydata) {
+            var size = Object.keys(mydata.categories).length;
+            var val = "";
+            for (var i = 0; i < size; i++) {
+                val +=  '<li>'
+                val +=    '<a href="meals.html?c='+mydata.categories[i].strCategory+'">'+mydata.categories[i].strCategory+'</a>'
+                val +=  '</li>'
+            }
+            $("#submenu").html(val);
+        }
+    });
+  }
+
+  setSubmenu()
   if(page=="index"){
     getCategories()
   }
