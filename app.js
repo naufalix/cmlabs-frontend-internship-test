@@ -18,7 +18,7 @@
             for (i = 0; i < size; i++) {
                 //if(mydata.data[i].id_film>5){continue;};
                 var desc = mydata.categories[i].strCategoryDescription;
-                if(desc.length>90){desc=desc.substring(1, 87)+"..."}
+                if(desc.length>90){desc=desc.substring(0, 86)+"..."}
                 val +=  '<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">'
                 val +=    '<div class="cat-service-section">'
                 val +=      '<div class="cat-service-inner">'
